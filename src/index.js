@@ -6,7 +6,6 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Provider } from "react-redux";
 import store from "./Redux/store";
-import 'font-awesome/css/font-awesome.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
