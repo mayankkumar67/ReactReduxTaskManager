@@ -10,9 +10,11 @@ let RootReducer = (state = initialState, actions) => {
     case "REMOVE_TASK":
       localStorage.setItem(
         "Tasks",
+        // eslint-disable-next-line 
         state.tasks.filter((record) => record != actions.payload)
       );
       return {
+        // eslint-disable-next-line 
         tasks: state.tasks.filter((record) => record != actions.payload),
       };
     case "EDIT_TASK":
