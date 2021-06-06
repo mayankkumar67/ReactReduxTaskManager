@@ -1,6 +1,7 @@
-let prevTasks = localStorage.getItem('Tasks').split(',');
+let prevTasks = localStorage.getItem('Tasks');
+if(prevTasks) prevTasks = prevTasks.split(',');
 
-let initialState = { tasks: prevTasks.length && prevTasks[0]!==''? prevTasks:[] };
+let initialState = { tasks: prevTasks && prevTasks.length && prevTasks[0]!==''? prevTasks:[] };
 
 let RootReducer = (state = initialState, actions) => {
   switch (actions.type) {
